@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Client Retainer Guardrail Portal</title>
+    <!-- Tailwind Engine -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans p-6">
+    <div class="max-w-6xl mx-auto space-y-6">
+        <header class="border-b border-slate-800 pb-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold tracking-tight text-white">Freelance Client Retainer Tracker</h1>
+                <p class="text-slate-400 text-sm">Automated system monitoring hour leakage with integrated search algorithms.</p>
+            </div>
+        </header>
+
+        <section class="bg-slate-900 border border-slate-800 rounded-xl p-4 flex gap-4 items-center" aria-label="Search Engine Console">
+            <div class="w-full">
+                <input type="text" id="search-input" placeholder="Search client name instantly via Binary Search..." class="w-full bg-slate-950 border border-slate-800 rounded px-3 py-2 text-slate-100 focus:outline-none focus:border-slate-700">
+            </div>
+            <button onclick="executeBinarySearch()" class="search-btn">Search_</button>
+        </section>
+
+        <main class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <section class="space-y-4 lg:col-span-1">
+                <h2 class="text-lg font-bold text-slate-300">Active Contracts (Alphabetical)</h2>
+                <div id="client-list-container" class="space-y-4"></div>
+            </section>
+
+            <section class="lg:col-span-2 space-y-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+                    <h3 class="font-bold text-white text-md mb-4">Log Completed Operations Task</h3>
+                    <form id="task-form" onsubmit="submitTask(event)" class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end">
+                        <div class="sm:col-span-2">
+                            <label for="task-desc" class="label-title">Task Description</label>
+                            <input type="text" id="task-desc" required class="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-slate100 focus:outline-none focus:border-blue-500 placeholder-slate-500">
+                        </div>
+                        <div>
+                            <label for="task-duration" class="label-title">Duration (Minutes)</label>
+                            <input type="number" id="task-duration" min="1" required class="w-full bg-slate-900 border border-slate-700 px-3 py-2 text-slate-100 focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="sm:col-span-3">
+                            <button type="submit" class="submit-btn">Commit Task to Retainer Record Matrix</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden">
+                    <div class="p-4 border-b border-slate-800 bg-slate-900/50">
+                        <h3 class="font-bold text-white text-md">Retention Utilization Audit Log</h3>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm border-collapse">
+                            <thead>
+                                <tr class="bg-slate-950 text-slate-400 text-xs font-mono uppercase tracking-wider border-b border-slate-800">
+                                    <th class="p-3">Task ID</th>
+                                    <th class="p-3">Work Operations Description</th>
+                                    <th class="p-3 text-right">Computed Allocation</th>
+                                </tr>
+                            </thead>
+                            <tbody id="audit-log-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Linking the external logic script -->
+    <script src="app.js"></script>
+</body>
+</html>

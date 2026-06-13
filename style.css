@@ -1,0 +1,36 @@
+.search-btn {.search-btn {
+    background-color: #2563eb;
+    font-family: submit-btn:hover { background-colorpadding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+}
+.search-btn:hover { background-color: #1d4ed8; }  .submit-btn:hover  display: block;
+    font-size: 0.75rem;
+    font-family: monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+}
+
+.form-input {
+    width: 100%;
+    background-color: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    color: #f1f5f9;
+}
+.form-input:focus { outline: none; border-color: #334155; }
+
+.submit-btn {
+    width: 100%;
+    background-color: #059669;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+}
+.submit-btn:hover { background-color: #047857; }
+
